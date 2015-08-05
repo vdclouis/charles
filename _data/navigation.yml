@@ -1,0 +1,13 @@
+- title: "Projects"
+  url: "/projects/"
+
+- title: "Photography"
+  url: "/Photography/"
+  subcategories:
+    - title: "Landscapes"
+      url: "/landscapes/"
+    - title: "Portrets"
+      url: "/portrets/"
+
+- title: "Contact"
+  url: "/contact/"

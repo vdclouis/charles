@@ -1,0 +1,11 @@
+---
+layout: page
+title: Portrets
+permalink: /portrets/
+---
+
+{% for post in site.posts %}
+    {% if post.categories contains 'portrets' %}
+        {{ post.title }}
+    {% endif %}
+{% endfor %}

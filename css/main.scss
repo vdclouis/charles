@@ -1,0 +1,136 @@
+---
+---
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "normalize";
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+$breakpoint-tablet: 768px;
+$side-bar: 300px;
+
+html {
+    background: #fefefe;
+    font-family: 'Lato', sans-serif;
+    color: #666;
+}
+
+h1 {
+    color: #888;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.site-header {
+    text-align: center;
+
+    @media (min-width: $breakpoint-tablet) {
+        text-align: left;
+        display: inline-block;
+        width: $side-bar;
+        vertical-align: top;
+    }
+
+    .site-title {
+        text-transform: uppercase;
+        font-size: 40px;
+    }
+
+    .site-nav {
+        margin: 10px;
+
+        ul {
+            display: inline-block;
+
+            @media (min-width: $breakpoint-tablet) {
+                display: block;
+            }
+        }
+
+        li {
+            display: inline-block;
+
+            @media (min-width: $breakpoint-tablet) {
+                display: block;
+            }
+        }
+    }
+
+    .page-link {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &.active {
+            color: #000;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            display: block;
+        }
+    }
+
+    .page-sub-link {
+        @media (min-width: $breakpoint-tablet) {
+            margin-left: 10px;
+        }
+
+        &.active {
+            color: #000;
+        }
+    }
+
+    .page-link,
+    .page-sub-link {
+        transition: .4s color;
+
+        &:hover {
+            color: #999;
+        }
+    }
+}
+
+.page-content {
+    margin: 20px;
+
+    .page-heading {
+        text-align: center;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        display: inline-block;
+        width: calc(100% - #{$side-bar} - 85px);
+    }
+}
+
+.post-list {
+    margin: 0;
+    padding: 0;
+
+    .post-meta {
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: #999;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        margin: 0;
+        text-align: right;
+        font-size: 14px;
+    }
+}

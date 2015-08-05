@@ -1,0 +1,33 @@
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+        <ul>
+          {% for nav in site.data.navigation %}
+            <li>
+              <a class="page-link {% if nav.url == page.url %}active{% endif %}" href="{{ nav.url | prepend: site.baseurl }}">{{ nav.title }}</a>
+            </li>
+            {% if nav.subcategories %}
+              <ul>
+                {% for sub in nav.subcategories %}
+                  <li>
+                    <a class="page-sub-link {% if sub.url == page.url %}active{% endif %}" href="{{ sub.url | prepend: site.baseurl }}">{{ sub.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
