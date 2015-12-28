@@ -1,8 +1,0 @@
----
-layout: image
-title:  "Le test"
-hero: "/assets/1.jpg"
-date:   2015-08-04 22:29:19
-categories: portrets
----
-![1]({{ site.baseurl }}/assets/1.jpg)
