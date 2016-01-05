@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+    {% include head.html %}
 
-  <body>
+    <body>
+        <nav class="menu" id="menu">
+            <h2>Charlotte De Graeve</h2>
+            <hr>
+            <ul>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+        <main id="panel">
+            <header>
+                <button class="toggle-button">MENU</button>
+            </header>
 
-  </body>
+            <div class="page-content">
+                <div class="wrapper">
+                    {{ content }}
+                </div>
+            </div>
+        </main>
+
+        {% include scripts.html %}
+
+    </body>
 
 </html>

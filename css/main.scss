@@ -1,20 +1,32 @@
 ---
 ---
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200);
+@import '_slideout';
 
-html {
-    background: url(/assets/bg.jpg) no-repeat center center fixed;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+    background: url(/assets/bg.jpg) no-repeat fixed;
     background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .name {
-    font-family: 'Raleway', sans-serif;
-    color: rgb(158, 158, 158);
+    color: rgba(0, 0, 0, .35);
+    font-weight: bold;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 60px;
+    font-size: 9vw;
     text-align: center;
     width: 100%;
     text-transform: uppercase;
