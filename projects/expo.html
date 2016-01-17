@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="expo-wrapper">
+    <header>
+        <button class="toggle-button">MENU</button>
+    </header>
+
+    <div class="grid">
+        {% for item in site.static_files %}
+            {% if item.path contains 'expo/thumbs' %}
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="{{ site.baseurl }}{{ item.path }}" alt="image" />
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

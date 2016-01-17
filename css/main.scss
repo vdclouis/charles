@@ -1,6 +1,6 @@
 ---
 ---
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400);
 @import '_slideout';
 
 html,
@@ -12,15 +12,23 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+header {
+    position: absolute;
+}
+
 main {
-    background: url(/assets/bg.jpg) no-repeat fixed;
+    height: 100%;
+}
+
+.home-wrapper {
+    background: url(/assets/home.jpg) no-repeat fixed;
     background-size: cover;
     width: 100%;
     height: 100%;
 }
 
 .name {
-    color: rgba(0, 0, 0, .35);
+    color: rgba(255, 255, 255, .35);
     font-weight: bold;
     position: absolute;
     left: 50%;
@@ -31,3 +39,5 @@ main {
     width: 100%;
     text-transform: uppercase;
 }
+
+@import '_projects';

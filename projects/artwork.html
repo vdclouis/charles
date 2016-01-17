@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="artwork-wrapper">
+    <header>
+        <button class="toggle-button">MENU</button>
+    </header>
+
+    <div class="grid">
+        {% for item in site.static_files %}
+            {% if item.path contains 'artwork/thumbs' %}
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="{{ site.baseurl }}{{ item.path }}" alt="image" />
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

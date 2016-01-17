@@ -5,25 +5,16 @@
 
     <body>
         <nav class="menu" id="menu">
-            <h2>Charlotte De Graeve</h2>
-            <hr>
+            <h2><a href="/">CHARLOTTE DE GRAEVE</a></h2>
             <ul>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li>ABOUT</li>
+                <li><a href="/projects">PROJECTS</a></li>
+                <li>CONTACT</li>
             </ul>
         </nav>
 
         <main id="panel">
-            <header>
-                <button class="toggle-button">MENU</button>
-            </header>
-
-            <div class="page-content">
-                <div class="wrapper">
-                    {{ content }}
-                </div>
-            </div>
+            {{ content }}
         </main>
 
         {% include scripts.html %}
