@@ -23,4 +23,58 @@
             fitWidth: true
         })
     </script>
+
+    <script>
+        /**
+         * Previews an image fullscreen
+         * @param {String} url
+         */
+        function preview (url)
+        {
+            var allPotentialPreviews = document.querySelectorAll('.preview');
+
+            for (var i = 0; i < allPotentialPreviews.length; ++i) {
+                var item = allPotentialPreviews[i];
+                document.body.removeChild(item);
+            }
+
+            var url = url.split('.thumb.jpg')[0];
+            url = url.split('thumbs/');
+
+            var titleContent = url[1].split('.jpg')[0];
+
+            url = url[0] + url[1];
+
+            var preview = document.createElement('div');
+            preview.className = 'preview';
+            document.body.appendChild(preview);
+            preview.style.opacity = 0;
+
+            window.getComputedStyle(preview).opacity;
+
+            preview.style.opacity = 1;
+
+            var close = document.createElement('button');
+            close.innerHTML = '×';
+            close.onclick = function close() {
+                document.body.removeChild(preview);
+            };
+            close.className = 'close-btn';
+            preview.appendChild(close);
+
+            var wrapper = document.createElement('div');
+            wrapper.className = 'preview-image-wrapper';
+            preview.appendChild(wrapper);
+
+            var image = document.createElement('div');
+            image.style.backgroundImage = 'url(' + url + ')';
+            image.style.backgroundSize = 'cover';
+            wrapper.appendChild(image);
+
+            var title = document.createElement('div');
+            title.className = 'title';
+            title.innerHTML = titleContent;
+            preview.appendChild(title);
+        }
+    </script>
 {% endif %}

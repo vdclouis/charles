@@ -35,7 +35,6 @@
     .artwork {
         margin-left: 40px;
     }
-
 }
 
 .projects-menu {
@@ -48,11 +47,13 @@
 
 .grid {
     margin: 0 auto;
+    height: 100%;
+    overflow: scroll;
+    padding-top: 44px
 }
 
 .grid-item {
     padding: 10px;
-    margin-top: 44px;
 }
 
 .expo-wrapper,
@@ -61,5 +62,49 @@
 
     .toggle-button {
         color: white;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    font-size: 44px;
+    cursor: pointer;
+    right: 20px;
+    color: white;
+}
+
+.preview {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .8);
+    transition: opacity .4s;
+
+    .title {
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        padding: 20px;
+    }
+
+    .preview-image-wrapper {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 60%;
+        height: 100%;
+
+        > div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: 100%
+        }
     }
 }

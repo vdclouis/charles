@@ -11,9 +11,9 @@ layout: default
         {% for item in site.static_files %}
             {% if item.path contains 'artwork/thumbs' %}
                 <div class="grid-item">
-                    <a href="#">
+                    <button onclick="preview('{{ site.baseurl }}{{ item.path }}')">
                         <img src="{{ site.baseurl }}{{ item.path }}" alt="image" />
-                    </a>
+                    </button>
                 </div>
             {% endif %}
         {% endfor %}
